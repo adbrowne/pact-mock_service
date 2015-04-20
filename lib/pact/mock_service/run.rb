@@ -67,7 +67,8 @@ module Pact
       def webbrick_opts
         opts = {
           :Port => port,
-          :AccessLog => []
+          :AccessLog => [],
+          :Host => "0.0.0.0"
         }
         opts.merge!(ssl_opts) if options[:ssl]
         opts
